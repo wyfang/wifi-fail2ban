@@ -1,0 +1,20 @@
+# Server-specific settings and credentials
+config/deployment.env
+config/cloudflare.credentials
+*.env
+*.key
+*.token
+
+# Runtime data and backups
+*.log
+*.sqlite3
+*.tar
+*.tar.gz
+backup/
+backups/
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
+*.swp
