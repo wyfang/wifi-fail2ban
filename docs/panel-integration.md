@@ -14,6 +14,8 @@
 - `/etc/fail2ban/jail.d/90-wifi.local`
 - `/etc/fail2ban/filter.d/wifi-frps.conf`
 - `/etc/fail2ban/filter.d/wifi-vaultwarden.conf`
+- `/etc/fail2ban/action.d/wifi-cloudflare.conf`
+- `/usr/local/libexec/wifi-fail2ban/wifi_cloudflare.py`
 - `/etc/logrotate.d/wifi-fail2ban`
 - `/etc/logrotate.d/wifi-services`
 - `/etc/tmpfiles.d/wifi-fail2ban.conf`
@@ -38,6 +40,8 @@ sudo fail2ban-client -t
 sudo fail2ban-client status
 sudo fail2ban-client status vaultwarden
 ```
+
+Token 模式的 `wifi-cloudflare` 是项目独立动作；宝塔页面可能无法编辑其账号范围、来源标记与凭据文件。这些内容通过 root 专用文件维护，审计脚本可检查动作名称和凭据类型。不要把 Token 填入宝塔原生 Global API Key 的字段。
 
 ## 重新安装宝塔插件
 
